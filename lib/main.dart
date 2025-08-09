@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp/LiquidSwipe/merge.dart';
-import 'package:foodapp/Screens/FirstScreen.dart';
-import 'package:foodapp/Screens/splash.dart';
+
+import 'Screens(Splash and front)/splash.dart';
 
 void main() {
   runApp(const MyApp());

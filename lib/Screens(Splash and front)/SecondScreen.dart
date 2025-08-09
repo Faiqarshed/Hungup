@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:foodapp/Screens/FifthScreen.dart';
 import '../Helpers/Button.dart';
+import 'FifthScreen.dart';
 
 class SecondScreen extends StatefulWidget {
   _SecondScreen createState() => _SecondScreen();
