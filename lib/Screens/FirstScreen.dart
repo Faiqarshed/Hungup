@@ -53,7 +53,7 @@ class _FirstScreen extends State<FirstScreen> with SingleTickerProviderStateMixi
             ),
             Positioned(
                 bottom:MediaQuery.of(context).size.height*0.08,
-                left: MediaQuery.of(context).size.width/2 -26,
+                left: MediaQuery.of(context).size.width/2 -32,
                 right: 0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -62,6 +62,14 @@ class _FirstScreen extends State<FirstScreen> with SingleTickerProviderStateMixi
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
                           color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                    SizedBox(width: 5),
+                    Container(height: 14, width: 14,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.grey,
+
                       ),
                     ),
                     SizedBox(width: 5),

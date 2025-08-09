@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/Screens/FirstScreen.dart';
+import 'package:foodapp/Screens/FourthScreen.dart';
 import 'package:foodapp/Screens/SecondScreen.dart';
 import 'package:foodapp/Screens/ThirdScreen.dart';
 import '../Helpers/Button.dart';
@@ -19,6 +20,7 @@ class _Merge extends State<Merge> {
           FirstScreen(),
           SecondScreen(),
           ThirdScreen(),
+          FourthScreen(),
         ],
         //enableSideReveal: true, // allows sliding with icon
         slideIconWidget: Icon(

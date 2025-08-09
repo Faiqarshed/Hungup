@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../Helpers/Button.dart';
 
-class ThirdScreen extends StatefulWidget {
-  _ThirdScreen createState() => _ThirdScreen();
+class FourthScreen extends StatefulWidget {
+  _FourthScreen createState() => _FourthScreen();
 }
 
-class _ThirdScreen extends State<ThirdScreen> {
+class _FourthScreen extends State<FourthScreen> {
   @override
   void initState() {
     super.initState();
@@ -16,9 +16,9 @@ class _ThirdScreen extends State<ThirdScreen> {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-        statusBarColor: Colors.white, // Android background
-        statusBarIconBrightness: Brightness.dark, // Android icons
-        statusBarBrightness: Brightness.light, // iOS icons
+        statusBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
       ),
     );
     return Scaffold(
@@ -27,15 +27,15 @@ class _ThirdScreen extends State<ThirdScreen> {
       body: Stack(
         children: [
           Positioned(
-            bottom: 330,
+            top: 20,
             left: 0,
             right: 0,
-            child: Image.asset('assets/images/burger.png'),
+            child: Image.asset('assets/images/Courier.png'),
           ),
           SizedBox(height: 45),
           Center(
             child: Text(
-              'Pick your Food',
+              'Get Food Delivered',
               style: TextStyle(
                 fontFamily: 'Satoshi',
                 fontWeight: FontWeight.w700,
@@ -52,7 +52,8 @@ class _ThirdScreen extends State<ThirdScreen> {
             Column(
               children: [
                 Text(
-                  'Pick your favorite food from amazing restaurants near\nyou, which provide amazing variety of foods near you.',
+                  'Get your food delivered from the nearest restaurant, in the\nshortest time possible',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'Satoshi',
                     fontWeight: FontWeight.w300,
@@ -101,16 +102,14 @@ class _ThirdScreen extends State<ThirdScreen> {
                   Container(height: 14, width: 14,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Theme.of(context).primaryColor,
-
+                      color: Colors.grey,
                     ),
                   ),
                   SizedBox(width: 5),
                   Container(height: 14, width: 14,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Colors.grey,
-
+                      color: Theme.of(context).primaryColor,
                     ),
                   )
                 ],
