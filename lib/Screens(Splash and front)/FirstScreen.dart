@@ -46,12 +46,12 @@ class _FirstScreen extends State<FirstScreen> with SingleTickerProviderStateMixi
             ),
 
             Positioned(
-              top: (MediaQuery.of(context).size.height)/2 + 154,
+              top: (MediaQuery.of(context).size.height)/2 + 147,
               left: 20,
               right: 20,
-              child: Button(),
+              child: Button(text: 'Login', color: Theme.of(context).primaryColor),
             ),
-            Positioned(
+            /*Positioned(
                 bottom:MediaQuery.of(context).size.height*0.08,
                 left: MediaQuery.of(context).size.width/2 -32,
                 right: 0,
@@ -90,7 +90,7 @@ class _FirstScreen extends State<FirstScreen> with SingleTickerProviderStateMixi
                     )
                   ],
                 )
-            ),
+            ),*/
           ],
         ),
       ),

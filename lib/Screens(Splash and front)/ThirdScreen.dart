@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../Helpers/Button.dart';
+import 'FifthScreen.dart';
 
 class ThirdScreen extends StatefulWidget {
   _ThirdScreen createState() => _ThirdScreen();
@@ -45,7 +46,7 @@ class _ThirdScreen extends State<ThirdScreen> {
           ),
           SizedBox(height: 10),
           Positioned(
-            bottom: 210,
+            bottom: MediaQuery.of(context).size.height/2 - 240,
             left: 0,
             right: 0,
             child:
@@ -62,9 +63,17 @@ class _ThirdScreen extends State<ThirdScreen> {
                 SizedBox(height: 83),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Button(),
+                  child: Button(text: 'Login', color: Theme.of(context).primaryColor),
                 ),
                 SizedBox(height: 20),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FifthScreen()),
+                );
+              },
+              child:
                 Text(
                   'Skip',
                   style: TextStyle(
@@ -73,48 +82,9 @@ class _ThirdScreen extends State<ThirdScreen> {
                     fontSize: 16,
                   ),
                 ),
+            ),
               ],
             ),
-          ),
-          Positioned(
-              bottom:MediaQuery.of(context).size.height*0.08,
-              left: MediaQuery.of(context).size.width/2 -32,
-              right: 0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(height: 14, width: 14,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  Container(height: 14, width: 14,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Colors.grey,
-
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  Container(height: 14, width: 14,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Theme.of(context).primaryColor,
-
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  Container(height: 14, width: 14,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Colors.grey,
-
-                    ),
-                  )
-                ],
-              )
           ),
         ],
       ),
